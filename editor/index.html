@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.css" />
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/python/python.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/javascript/javascript.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<style>
+			div.codeblock {
+				border: 2px solid grey;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="codeblock" style="font-size: 50px;">
+			<textarea name="mytextarea" id="mytextarea" style="height: 100%;"></textarea>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-lg-2">
+					<div class="form-group">
+						<button id="jsbutton" class="btn btn-success btn-lg" onclick="changeMode('jsbutton', 'pybutton');" style="font-size: 30px;">Javscript</button>
+						<button id="pybutton" class="btn btn-lg" onclick="changeMode('pybutton', 'jsbutton');" style="font-size: 30px;">Python</button>
+					</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var cm = CodeMirror(function(elt) {
+			mytextarea.parentNode.replaceChild(elt, mytextarea);
+		}, {value: mytextarea.value, lineNumbers: true, mode: "javascript"});
+		cm.setSize("100%", "50%");
+
+		function changeMode(mode, p) {
+			cm.setValue("");
+			document.getElementById(p).classList.remove('btn-success');
+			document.getElementById(mode).classList.add('btn-success');
+			if (p == "jsbutton") {
+				cm.setOption("mode", "python");
+			} else {
+				cm.setOption("mode", "javascript");
+			}
+		}
+	</script>
+	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+</html>
