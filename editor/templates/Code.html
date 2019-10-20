@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.css" />
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/python/python.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/clike/clike.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<style>
+			* {
+				padding: 2px;
+			}
+		</style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>chat</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{ url_for('static', filename='Code.css') }}"/>
+<script id="applicationScript" type="text/javascript" src="{{ url_for('static', filename='Code.js') }}"></script>
+</head>
+<body>
+<div id="Code">
+	<svg class="Path_100" viewBox="0 0 412 645.6">
+		<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Path_100" d="M 0 0 L 412 0 L 412 645.5999755859375 L 0 645.5999755859375 L 0 0 Z">
+		</path>
+	</svg>
+	<svg class="Rectangle_5">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="412" height="61">
+		</rect>
+	</svg>
+	<svg class="Rectangle_7">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_7" rx="0" ry="0" x="0" y="0" width="206" height="61">
+		</rect>
+	</svg>
+	<svg class="Rectangle_8">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_8" rx="0" ry="0" x="0" y="0" width="206" height="61">
+		</rect>
+	</svg>
+	<div id="Arrow">
+		<svg class="Path_1" viewBox="0 0 22.212 3">
+			<path fill="rgba(0,0,0,0)" stroke="rgba(206,206,206,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_1" d="M 22.21228408813477 0 L 0 0">
+			</path>
+		</svg>
+		<svg class="Line_2">
+			<path fill="transparent" stroke="rgba(206,206,206,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Line_2" d="M 7.438104629516602 0 L 0 7.438104629516602">
+			</path>
+		</svg>
+		<svg class="Line_3">
+			<path fill="transparent" stroke="rgba(206,206,206,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Line_3" d="M 0 0 L 7.438104629516602 7.438104629516602">
+			</path>
+		</svg>
+	</div>
+	<svg class="michael_frattaroli_gKbrJTDV6os">
+		<pattern elementId="michael_frattaroli_gKbrJTDV6os_A2_Ellipse_2" id="michael_frattaroli_gKbrJTDV6os_A2_Ellipse_2_pattern" x="0" y="0" width="100%" height="100%">
+			<image x="0" y="0" width="100%" height="100%" href="{{ url_for('static', filename='michael_frattaroli_gKbrJTDV6os_A2_Ellipse_2_pattern.jpg') }}" xlink:href="michael_frattaroli_gKbrJTDV6os_A2_Ellipse_2_pattern.png"></image>
+		</pattern>
+		<ellipse fill="url(#michael_frattaroli_gKbrJTDV6os_A2_Ellipse_2_pattern)" id="michael_frattaroli_gKbrJTDV6os" rx="36.5" ry="36.5" cx="36.5" cy="36.5">
+		</ellipse>
+	</svg>
+	<svg class="photo_1515880584373_53ec6ab8cf">
+		<pattern elementId="photo_1515880584373_53ec6ab8cf_A2_Ellipse_4" id="photo_1515880584373_53ec6ab8cf_A2_Ellipse_4_pattern" x="0" y="0" width="100%" height="100%">
+			<image x="0" y="0" width="100%" height="100%" href="{{ url_for('static', filename='photo_1515880584373_53ec6ab8cf_A2_Ellipse_4_pattern.jpg') }}" xlink:href="photo_1515880584373_53ec6ab8cf_A2_Ellipse_4_pattern.png"></image>
+		</pattern>
+		<ellipse fill="url(#photo_1515880584373_53ec6ab8cf_A2_Ellipse_4_pattern)" id="photo_1515880584373_53ec6ab8cf" rx="36.5" ry="36.5" cx="36.5" cy="36.5">
+		</ellipse>
+	</svg>
+	<svg class="Ellipse_7">
+		<ellipse fill="rgba(74,163,240,1)" id="Ellipse_7" rx="6.5" ry="6.5" cx="6.5" cy="6.5">
+		</ellipse>
+	</svg>
+	<!-- <div id="ID1_def_func____2___print__Thi">
+		<span>1</span><span style="font-style:normal;font-weight:normal;"> def func():</span><br><span>2</span><span style="font-style:normal;font-weight:normal;">   print("This is func")</span><br><span>3   </span><span style="font-style:normal;font-weight:normal;">i += 1</span>
+	</div> -->
+
+	<div id="ID1_def_func____2___print__Thi" style="font-size: 20px; width: 396px; height: 70%;">
+		<textarea name="mytextarea" id="mytextarea"></textarea>
+		<p id="problemstatement" style="
+		position: absolute; 
+		width: 100%; 
+		max-width: 100%;
+		background: white; 
+		z-index: 100;
+		top: 0; 
+		color: #5e5e5e;
+		font-family: Roboto;
+		font-weight: 100;
+		padding: 5px;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		hyphens: auto;
+		display: none;">
+			Write a function to print the first 10 natural numbers.
+		</p>
+		<hr>
+		<div id="results" style="
+		background-color: #eee; 
+		font-family: Roboto; 
+		position: absolute; 
+		width: 100%; 
+		height: 200px; 
+		bottom: -10px;  
+		z-index: 100; 
+		overflow: scroll; 
+		visibility: hidden;
+		color: gray;
+		font-weight: 300;
+		padding: 5px;
+		border-radius: 5px;
+		">
+				
+		</div>
+		<!-- <div id="options" style="
+		background-color: #eee; 
+		font-family: Roboto; 
+		position: absolute; 
+		width: 100%; 
+		height: 200px; 
+		bottom: -10px;  
+		z-index: 100; 
+		color: gray;
+		font-weight: 300;
+		padding: 5px;
+		border-radius: 5px;
+		">
+		<li onclick="insertCode('for')";>for</li>
+		<li onclick="insertCode('if')">if</li>
+		</div> -->
+	</div>
+
+
+
+	<div id="Write_a_function_to_compute_th" style="cursor: pointer;" onclick="toggle_question()">
+		<span>Write a function to print the fir...</span>
+	</div>
+	<div id="Submit">
+		<span>Submit</span>
+	</div>
+	<div id="Test_Code" onclick="runCode()" style="cursor: pointer;">
+		<span>Test Code</span>
+	</div>
+	<svg class="Rectangle_10">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_10" rx="0" ry="0" x="0" y="0" width="73" height="61">
+		</rect>
+	</svg>
+	<div id="PY_3" onclick="toggleMode()" style="cursor: pointer;">
+		<span id="lang">PY 3</span>
+	</div>
+</div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+		var cm = CodeMirror(function(elt) {
+			mytextarea.parentNode.replaceChild(elt, mytextarea);
+		}, {value: mytextarea.value, lineNumbers: true, mode: "python", matchBrackets: true});
+		cm.setSize("100%", "100%");
+
+
+		function toggleMode() {
+			cm.setValue("");
+			var langspan = document.getElementById("lang");
+			var currentMode = langspan.innerText;
+			if (currentMode === "PY 3") {
+				langspan.innerText = "CPP";
+				cm.setOption("mode", "text/x-c++src");
+
+			} else {
+				langspan.innerText = "PY 3";
+				cm.setOption("mode", "python");
+
+			}
+		}
+
+		function runCode() {
+			document.getElementById("results").innerHTML = "" ;
+			var code = cm.getValue();
+			console.log(code);
+			var currentLang = "";
+			var langspan = document.getElementById("lang");
+			var currentMode = langspan.innerText;
+			if (currentMode === "PY 3") {
+				currentLang = "py";
+			} else {
+				currentLang = "cpp";
+			}
+
+			var url = "/compileCode/" + currentLang;
+			var xhr = new XMLHttpRequest();
+			xhr.open("POST", url, true);
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == XMLHttpRequest.DONE) {
+					resultsdiv = document.getElementById("results");
+					resultsdiv.innerHTML = xhr.responseText
+					resultsdiv.style.visibility = "visible";
+				}
+			}
+			params = "value=" + encodeURIComponent(code);
+			xhr.send(params);
+		}
+
+		cm.on("focus", function() {
+			document.getElementById("results").style.visibility = "hidden";
+			$("#problemstatement").fadeOut();
+		});
+
+		window.onload = function() {
+			var ps = $("#problemstatement");
+			// ps.fadeOut();
+		}
+
+		function toggle_question() {
+			var ps = $("#problemstatement");
+			ps.fadeToggle();
+		}
+		
+		function strip(s) {
+			var i = s.length - 1;
+			while (i >= 0 && s[i] !== "\n") {
+				i--;
+			}
+			return [s.substr(i + 1, s.length + 1), s.charAt(i-1) === ":"];
+		}
+
+
+		function insertCode(block) {
+			var langspan = document.getElementById("lang");
+			var currentMode = langspan.innerText;
+			var lang = "";
+			if (currentMode === "PY 3") {
+				lang = "py";
+			} else {
+				lang = "cpp";
+			}
+
+
+			if (lang === "py") {
+				var cmvalue = cm.getValue();
+				var finalval = cmvalue;
+				[spaces, colon] = strip(cmvalue);
+				console.log(spaces.length);
+				console.log(colon);
+				
+				if (block === "for") {
+					finalval += "for i in range(n):\n";
+					finalval += " ".repeat(spaces.length + 2);
+				}
+				if (block === "if") {
+					finalval += "if <condition>:\n";
+					finalval += " ".repeat(spaces.length + 2);
+				}
+					cm.setValue(finalval);
+			}
+			else {
+
+			}
+		}
+	</script></script>
+</html>

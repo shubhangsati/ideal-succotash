@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+.mediaViewInfo {
+	--web-view-name: Login Screen;
+	--web-view-id: Login_Screen;
+	--web-center-horizontally: true;
+	--web-center-vertically: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Login_Screen;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+#Login_Screen {
+	position: absolute;
+	box-sizing: border-box;
+	transform: translateX(-50%) translateY(-50%);
+	left: 50%;
+	top: 50%;
+	background: #E5E5E5;
+	width: 412px;
+	height: 892px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	--web-view-name: Login Screen;
+	--web-view-id: Login_Screen;
+	--web-center-horizontally: true;
+	--web-center-vertically: true;
+	--web-enable-deep-linking: true;
+}
+#get_started {
+	position: absolute;
+	width: 245px;
+	height: 69px;
+	left: 84px;
+	top: 666px;
+	overflow: visible;
+}
+.button_get_started {
+	position: absolute;
+	overflow: visible;
+	width: 245px;
+	height: 69px;
+	left: 0px;
+	top: 0px;
+}
+#Get_Started {
+	position: absolute;
+	left: 35px;
+	top: 17px;
+	overflow: visible;
+	width: 129px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(94,94,94,1);
+}
+#Arrow {
+	position: absolute;
+	width: 21px;
+	height: 8px;
+	left: 183.5px;
+	top: 31.5px;
+	overflow: visible;
+}
+.Path_1 {
+	overflow: visible;
+	position: absolute;
+	top: 4px;
+	left: 0px;
+	width: 23px;
+	height: 3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_2 {
+	overflow: visible;
+	position: absolute;
+	top: 0px;
+	left: 17px;
+	width: 8.243px;
+	height: 8.243px;
+}
+.Line_3 {
+	overflow: visible;
+	position: absolute;
+	top: 4px;
+	left: 17px;
+	width: 8.243px;
+	height: 8.243px;
+}
+.Line_4 {
+	overflow: visible;
+	position: absolute;
+	top: 447.5px;
+	left: 44.5px;
+	width: 320.454px;
+	height: 3px;
+}
+#Mobile_Number {
+	position: absolute;
+	left: 48px;
+	top: 409px;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(206,206,206,1);
+}
+.Line_5 {
+	overflow: visible;
+	position: absolute;
+	top: 532.5px;
+	left: 47.631px;
+	width: 320.454px;
+	height: 3px;
+}
+#Password {
+	position: absolute;
+	left: 48px;
+	top: 494px;
+	overflow: visible;
+	width: 90px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(206,206,206,1);
+}
+#Welcome__sign_in_to_continue {
+	position: absolute;
+	left: 45px;
+	top: 184px;
+	overflow: visible;
+	width: 317px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 38px;
+	color: rgba(61,61,61,1);
+}
+
+input[type=number], input[type=password] {
+	font-family: Roboto;
+	padding: 10px;
+	padding-left: 0;
+	padding-bottom: 0;
+	border: 0;
+	font-size: 20px;
+	-moz-appearance:textfield; /* Firefox */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+     opacity: 0.6 !important;
+}
+
+
+input:focus {
+	outline-width: 0px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>login</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{ url_for('static', filename='Login_Screen.css') }}"/>
+<script id="applicationScript" type="text/javascript" src="{{ url_for('static', filename='Login_Screen.js') }}"></script>
+</head>
+<body>
+<div id="Login_Screen">
+	<div id="get_started">
+		<svg class="button_get_started">
+			<rect fill="rgba(241,241,241,1)" id="button_get_started" rx="10" ry="10" x="0" y="0" width="245" height="69">
+			</rect>
+		</svg>
+		<div id="Get_Started" style="cursor: pointer;" onclick="goto('home');">
+			<span>Get Started</span>
+		</div>
+		<div id="Arrow">
+			<svg class="Path_1" viewBox="0 0 20 3">
+				<path fill="rgba(0,0,0,0)" stroke="rgba(94,94,94,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_1" d="M 0 0 L 20 0">
+				</path>
+			</svg>
+			<svg class="Line_2">
+				<path fill="transparent" stroke="rgba(94,94,94,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Line_2" d="M 0 0 L 4 4">
+				</path>
+			</svg>
+			<svg class="Line_3">
+				<path fill="transparent" stroke="rgba(94,94,94,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Line_3" d="M 4 0 L 0 4">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<svg class="Line_4">
+		<path fill="transparent" stroke="rgba(163,163,163,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_4" d="M 0 0 L 320.4544677734375 0">
+		</path>
+	</svg>
+	<div id="Mobile_Number">
+		<input type="number" id="number" placeholder="Mobile Number" />
+	</div>
+	<svg class="Line_5">
+		<path fill="transparent" stroke="rgba(163,163,163,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_5" d="M 0 0 L 320.4544677734375 0">
+		</path>
+	</svg>
+	<div id="Password">
+		<input type="password" id="password" placeholder="Password" />
+	</div>
+	<div id="Welcome__sign_in_to_continue">
+		<span>Welcome,</span><br><span style="color:rgba(131,146,183,1);">sign in to continue</span>
+	</div>
+</div>
+</body>
+<script>
+	function goto(s) {
+		if (s == "home") {
+			window.location = "{{ url_for('home') }}";
+		}
+	}
+</script>
+</html>

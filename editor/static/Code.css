@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.mediaViewInfo {
+	--web-view-name: Code;
+	--web-view-id: Code;
+	--web-center-horizontally: true;
+	--web-center-vertically: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Code;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+#Code {
+	position: absolute;
+	box-sizing: border-box;
+	transform: translateX(-50%) translateY(-50%);
+	left: 50%;
+	top: 50%;
+	background: #E5E5E5;
+	width: 412px;
+	height: 892px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	--web-view-name: Code;
+	--web-view-id: Code;
+	--web-center-horizontally: true;
+	--web-center-vertically: true;
+	--web-enable-deep-linking: true;
+}
+.Path_100 {
+	overflow: visible;
+	position: absolute;
+	top: 185.4px;
+	left: 0px;
+	width: 412px;
+	height: 645.6px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Rectangle_5 {
+	position: absolute;
+	overflow: visible;
+	width: 412px;
+	height: 61px;
+	left: 0px;
+	top: 126px;
+}
+.Rectangle_7 {
+	position: absolute;
+	overflow: visible;
+	width: 206px;
+	height: 61px;
+	left: 206px;
+	top: 831px;
+}
+.Rectangle_8 {
+	position: absolute;
+	overflow: visible;
+	width: 206px;
+	height: 61px;
+	left: 0px;
+	top: 831px;
+}
+#Arrow {
+	position: absolute;
+	width: 24.072px;
+	height: 14.876px;
+	left: 23.5px;
+	top: 28.062px;
+	overflow: visible;
+}
+.Path_1 {
+	overflow: visible;
+	position: absolute;
+	top: 7.438px;
+	left: 1.86px;
+	width: 25.212px;
+	height: 3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_2 {
+	overflow: visible;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 11.681px;
+	height: 11.681px;
+}
+.Line_3 {
+	overflow: visible;
+	position: absolute;
+	top: 7.438px;
+	left: 0px;
+	width: 11.681px;
+	height: 11.681px;
+}
+#michael_frattaroli_gKbrJTDV6os {
+	opacity: 0.8;
+}
+.michael_frattaroli_gKbrJTDV6os {
+	position: absolute;
+	overflow: visible;
+	width: 73px;
+	height: 73px;
+	left: 302px;
+	top: 28px;
+}
+#photo_1515880584373_53ec6ab8cf {
+	opacity: 0.8;
+}
+.photo_1515880584373_53ec6ab8cf {
+	position: absolute;
+	overflow: visible;
+	width: 73px;
+	height: 73px;
+	left: 222px;
+	top: 28px;
+}
+.Ellipse_7 {
+	position: absolute;
+	overflow: visible;
+	width: 13px;
+	height: 13px;
+	left: 277px;
+	top: 30px;
+}
+#ID1_def_func____2___print__Thi {
+	position: absolute;
+	left: 9px;
+	top: 192px;
+	overflow: visible;
+	width: 303px;
+	/* white-space: nowrap; */
+	text-align: left;
+	font-family: Consolas;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	color: rgba(131,146,183,1);
+}
+#Write_a_function_to_compute_th {
+	position: absolute;
+	left: 16px;
+	top: 142px;
+	overflow: visible;
+	width: 315px;
+	/* white-space: nowrap; */
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(94,94,94,1);
+}
+#Submit {
+	position: absolute;
+	left: 269px;
+	top: 845px;
+	overflow: visible;
+	width: 82px;
+	/* white-space: nowrap; */
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(94,94,94,1);
+}
+#Test_Code {
+	position: absolute;
+	left: 48px;
+	top: 845px;
+	overflow: visible;
+	width: 112px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(94,94,94,1);
+}
+.Rectangle_10 {
+	position: absolute;
+	overflow: visible;
+	width: 73px;
+	height: 61px;
+	left: 339px;
+	top: 126px;
+}
+#PY_3 {
+	position: absolute;
+	left: 351px;
+	top: 142px;
+	overflow: visible;
+	width: 47px;
+	/* white-space: nowrap; */
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(94,94,94,1);
+}
+
+#options li {
+	display: inline-block;
+	background: rgba(255, 255, 255, 0.4);
+	padding: 0 10px;
+	margin: 5px;
+	border: 1px solid gray;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#options li:hover {
+	background: rgba(255, 255, 255, 0.8);
+}

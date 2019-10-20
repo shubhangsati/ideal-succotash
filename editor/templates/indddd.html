@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.css" />
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/python/python.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/javascript/javascript.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/clike/clike.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<style>
+			* {
+				padding: 2px;
+			}
+			div.codeblock {
+				border: 2px solid grey;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="codeblock" style="font-size: 50px;">
+			<textarea name="mytextarea" id="mytextarea" style="height: 100%;"></textarea>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-lg-2">
+					<div class="form-group">
+						<button id="cppbutton" class="btn btn-success btn-lg" onclick="changeMode('cppbutton', 'pybutton');" style="font-size: 30px;">C++</button>
+						<button id="pybutton" class="btn btn-lg" onclick="changeMode('pybutton', 'cppbutton');" style="font-size: 30px;">Python</button>
+					</div>
+					<div class="form-group">
+						<button id="runbutton" class="btn btn-danger btn-lg" onclick="runCode();" style="font-size: 30px;">Run</button>
+					</div>
+			</div>
+			<div class="col-md-2 col-lg-6"></div>
+			<div class="col-md-6 col-lg-4" id="results">
+
+			</div>
+		</div>
+	</body>
+	<script>
+		var cm = CodeMirror(function(elt) {
+			mytextarea.parentNode.replaceChild(elt, mytextarea);
+		}, {value: mytextarea.value, lineNumbers: true, mode: "text/x-c++src", matchBrackets: true});
+		cm.setSize("100%", "50%");
+
+		function changeMode(mode, p) {
+			cm.setValue("");
+			document.getElementById(p).classList.remove('btn-success');
+			document.getElementById(mode).classList.add('btn-success');
+			if (p == "cppbutton") {
+				cm.setOption("mode", "python");
+			} else {
+				cm.setOption("mode", "text/x-c++src");
+			}
+		}
+
+		function runCode() {
+			document.getElementById("results").innerHTML = "" ;
+			var code = cm.getValue();
+			console.log(code);
+			var currentLang = "";
+			if (document.getElementById("cppbutton").classList.contains("btn-success")) {
+				currentLang = "cpp";
+			} else {
+				currentLang = "py";
+			}
+
+			var url = "/compileCode/" + currentLang;
+			var xhr = new XMLHttpRequest();
+			xhr.open("POST", url, true);
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == XMLHttpRequest.DONE) {
+					document.getElementById("results").innerHTML = xhr.responseText;
+				}
+			}
+			params = "value=" + encodeURIComponent(code);
+			xhr.send(params);
+		}
+	</script>
+	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+</html>
